@@ -72,7 +72,7 @@ Teacher speaks → Students copy (DICTATION TAX)
 | **SPONSOR-WANTS** | iQOO wants NPU inference + Office Kit usage + creative phone hardware use (mic, camera, sensors) |
 
 ### Why hasn't this been solved?
-1. **On-device AI maturity:** Until 2025–2026, phone-local STT + SLM was too slow/inaccurate for real-time classroom use. Snapdragon 8 Gen 3+ with Hexagon NPU changes this.
+1. **On-device AI maturity:** Until 2025–2026, phone-local STT + SLM was too slow/inaccurate for real-time classroom use. Snapdragon 8 Gen 5 with Hexagon NPU changes this.
 2. **Teacher ≠ Student ownership:** Existing apps are student-centric (each student records individually → bad audio, battery drain, no quality control). The insight is that the **teacher's device** should be the capture node, not 60 student phones.
 3. **Distribution problem:** Transcription is solved; distribution + adaptive testing based on per-student analytics is not.
 4. **Indian classroom constraints:** No reliable Wi-Fi, no budget for subscriptions, teachers uncomfortable with cloud uploads of their lectures.

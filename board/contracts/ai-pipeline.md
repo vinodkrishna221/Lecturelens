@@ -61,7 +61,7 @@ Unchanged from v1. Runs Whisper Small on Snapdragon NPU.
 { code: "TRANSCRIPTION_FAILED", message: "Whisper inference failed: {nativeError}" }
 ```
 
-**Latency budget:** < 15s for 3 minutes of audio on Snapdragon 8 Gen 3.
+**Latency budget:** < 15s for 3 minutes of audio on Snapdragon 8 Gen 5.
 
 ---
 

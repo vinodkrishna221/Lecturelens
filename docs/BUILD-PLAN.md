@@ -37,7 +37,7 @@
 |---|---|---|
 | **App** | APK sideloaded on iQOO device | `file:///sdcard/LectureLens.apk` |
 | **Models** | Pre-loaded on device storage | `/data/data/com.lecturelens/models/` |
-| **Demo device** | iQOO flagship (Snapdragon 8 Gen 3) | Physical device at venue |
+| **Demo device** | iQOO flagship (Snapdragon 8 Gen 5) | Physical device at venue |
 | **Laptop** | Office Kit mirror target | Any laptop with Office Kit receiver |
 
 > No cloud deploy. No URLs. The phone IS the server.

@@ -22,7 +22,7 @@ AFFECTS: Freeze calendar computed. Skeleton deadline = Sat 17:00. Submission by 
 
 ### 4 · Stack: React Native + On-Device AI                   2026-09-21 18:50 IST · by Orion
 CHOSE: React Native (Expo) + TypeScript | SQLite (expo-sqlite) | Whisper Small via whisper.rn (QNN/NPU) | Phi-4-mini Q4_K_M via llama.cpp | ML Kit OCR | ts-fsrs | No backend — fully on-device. APK sideload for demo.
-BECAUSE: Cross-platform iteration speed (3 builders, 30h) + offline-only constraint eliminates server need. Whisper Small is the accuracy sweet spot for Indian English on Snapdragon 8 Gen 3. Phi-4-mini best instruction-following at 3.8B. SQLite is zero-config, ships with Expo.
+BECAUSE: Cross-platform iteration speed (3 builders, 30h) + offline-only constraint eliminates server need. Whisper Small is the accuracy sweet spot for Indian English on Snapdragon 8 Gen 5. Phi-4-mini best instruction-following at 3.8B. SQLite is zero-config, ships with Expo.
 AFFECTS: All tracks. No deploy infra needed. Models pre-loaded on device (~2.5GB total). FE/AI-Pipeline/Quiz+Analytics are the 3 tracks.
 
 ### 5 · PIVOT: Hybrid Online — Firebase + Cloudinary         2026-09-21 19:15 IST · by Orion

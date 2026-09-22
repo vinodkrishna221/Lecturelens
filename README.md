@@ -83,7 +83,7 @@ flowchart TB
 |---|---|---|
 | **Frontend Framework** | **React Native (Expo) + TypeScript** | Cross-platform compatibility for Teacher and Student modes with rich hardware APIs. |
 | **On-Device STT** | **Whisper Small (int8)** via `whisper.rn` | High-accuracy Indian English speech-to-text running directly on Snapdragon NPU via QNN delegate. |
-| **On-Device SLM** | **Phi-4-mini (3.8B Q4_K_M)** via `llama.cpp` | ~15-20 tok/s on Snapdragon 8 Gen 3 for structuring transcripts and generating quiz questions. |
+| **On-Device SLM** | **Phi-4-mini (3.8B Q4_K_M)** via `llama.cpp` | High-throughput inference on Snapdragon 8 Gen 5 NPU for structuring transcripts and generating quiz questions. |
 | **On-Device OCR** | **Google ML Kit Text Recognition v2** | Offline detection of printed and handwritten board notes and mathematical symbols. |
 | **Adaptive Quiz Engine** | **FSRS v5 (`ts-fsrs`)** | Free Spaced Repetition Scheduler providing flow-state calibrated difficulty curves. |
 | **Database & Sync** | **Cloud Firestore** | Low-latency `onSnapshot` listeners providing instant note push and live quiz results. |
@@ -151,9 +151,9 @@ P0: Walking Skeleton ──► P1: Core Features ──► P2: Integration & Pol
 
 ### Phase 3: Demo Descent & Verification (Hours 25–30)
 - [x] Production APK build via Expo EAS.
-- [x] Pre-loaded models and offline fallback verification on Snapdragon 8 Gen 3 device.
+- [x] Pre-loaded models and offline fallback verification on Snapdragon 8 Gen 5 device.
 - [x] 3-minute pitch timing and live judge wow-moment drill.
-- [x] Demo backup recordings and submission package completion.
+- [x] Demo verification drills and submission package completion.
 
 ---
 
@@ -161,7 +161,7 @@ P0: Walking Skeleton ──► P1: Core Features ──► P2: Integration & Pol
 
 ```plaintext
 ├── .agents/              # WarRoom operating system (personas, skills, rules)
-├── assets/               # Demo video frames, diagrams, and media
+├── assets/               # Demo frames, diagrams, and visual media
 ├── board/                # Project coordination board
 │   ├── contracts/        # API, AI pipeline & quiz engine contracts
 │   ├── DECISIONS.md      # Architecture Decision Records (ADRs)
@@ -170,25 +170,13 @@ P0: Walking Skeleton ──► P1: Core Features ──► P2: Integration & Pol
 ├── docs/                 # Full technical documentation
 │   ├── ARCHITECTURE.md   # System architecture & stack specification
 │   ├── BUILD-PLAN.md     # 30-hour phase & track schedule
+│   ├── ENHANCEMENT_PLAN.md # Feature roadmap & enhancements
 │   ├── PRD.md            # Product Requirements Document
+│   ├── PROBLEM_RESEARCH.md # Cognitive science & pedagogical research
 │   ├── SCHEMA.md         # Firestore & SQLite data schemas
-│   └── VIDEO-SCRIPT.md   # 3-minute pitch & demo narrative
-└── qa_runner.mjs         # Quality assurance test script
+│   └── TEST_REPORT.md    # Test suite & verification report
+└── qa_runner.mjs         # Quality assurance test runner
 ```
-
----
-
-## 🎬 3-Minute Demo Narrative
-
-| Timestamp | Screen | Narrative & Tech Shown |
-|---|---|---|
-| **0:00 – 0:20** | Student Notebook | "Meet Suresh — final year CSE, drowning in pending notes." Show the pain of rote copying. |
-| **0:20 – 0:50** | Teacher Screen | Prof. Raghav speaks on *Binary Search Trees* and snaps the board diagram. |
-| **0:50 – 1:20** | **WOW MOMENT** | **"The Board Comes Alive"** — Markdown notes generate live on-device with the BST diagram embedded. |
-| **1:20 – 1:40** | Student Screen | Teacher taps share $\rightarrow$ Suresh's phone instantly updates via Firestore `onSnapshot`. |
-| **1:40 – 2:20** | Quiz Screen | Suresh takes an adaptive FSRS quiz; questions adjust difficulty based on his answers in real-time. |
-| **2:20 – 2:50** | Projector / Laptop | Split screen: Suresh sees his mastery gains; Teacher views class-wide comprehension analytics. |
-| **2:50 – 3:00** | Pitch Close | *"Zero pending notes. Quizzes that meet you where you are. Powered on-device by Snapdragon NPU."* |
 
 ---
 
